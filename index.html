@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Quiz App (JS OOP)</title>
+    </head>
+    <body>
+        <!-- Setting Page -->
+        <div class="settings">
+            <h2 class="settings__title"> Quiz Settings </h2>
+
+            <div class="n_questions">
+                <label for="amount">Amount of Questions:</label>
+                <input id="amount" type="number" min="1" max="10">
+            </div>
+
+            <div class="category">
+                <label for="category">Select Category:</label>
+                <select id="category" name="category">
+                    <option value="21">Sports</option>
+                    <option value="27">Animals</option>
+                    <option value="11">Films</option>
+                    <option value="28">Vehicles</option>
+                    <option value="18">Computer Science</option>
+                </select>
+            </div>
+
+            <div class="difficulty">
+                <label for="difficulty">Difficulty:</label>
+                
+                <label for="easy">
+                    <input type="radio" name="difficulty" id="easy" value="easy">
+                    Easy
+                </label>
+                <label for="medium">
+                    <input type="radio" name="difficulty" id="medium" value="medium">
+                    Medium
+                </label>
+                <label for="hard">
+                    <input type="radio" name="difficulty" id="hard" value="hard">
+                    Hard
+                </label>
+                
+            </div>
+            
+            <button id="start" class="submit">Start Quiz</button>
+        </div>
+        <!-- Quiz page -->
+        <div class="quiz" style="display: none;">
+            <h1>Quiz questions</h1>
+            <div class="count">
+                <span id="current">1</span>
+                <span>/</span>
+                <span id="total"></span>
+            </div>
+            <h3 id="question"></h3>
+
+            <label id="a1" calss="answer"></label>
+            <label id="a2" calss="answer"></label>
+            <label id="a3" calss="answer"></label>
+            <label id="a4" calss="answer"></label>
+
+            <button id="next">Next</button>
+        </div>
+        <div class="final" style="display:none">
+            <h2>You answered all questions</h2>
+            <p class="score"></p>
+            <p>try again</p>
+            <button id="pervious">Again</button>
+        </div>
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>
